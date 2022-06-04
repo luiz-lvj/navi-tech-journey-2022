@@ -4,6 +4,6 @@ import Footer from "./Footer";
 
 export default function ParkList(){
     return(
-        <Footer/>
+        <Footer></Footer>
     );
 }
