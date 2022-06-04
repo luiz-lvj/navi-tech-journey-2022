@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
 import HomeGO from "../imgs/home_icon_0.png";
 import HomeYET from "../imgs/home_icon_1.png";
 import HistGO from "../imgs/icon_hist_0.png";
@@ -12,7 +11,6 @@ import styled from 'styled-components';
 
 
 const Footer = () => {
-    const history = useNavigate();
     return (
         <Box>
             <Column>
