@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle `
         line-height: 1;
         font-family: 'Roboto', sans-serif;
         background: #A800FF;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content:center;
     }
     ol, ul {
         list-style: none;
