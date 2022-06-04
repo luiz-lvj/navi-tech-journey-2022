@@ -3,6 +3,7 @@ import logoWhite from '../imgs/Logo_White.png';
 import arrow from "../imgs/Arrow.png";
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import Footer from "./Footer";
 
 export default function Start(){
     const history = useNavigate();
