@@ -1,16 +1,15 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import GlobalStyle from "./components/globalStyle";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalStyle from "./components/GlobalStyle";
+import Start from "./components/Start";
 
 
 function App() {
   return (
     <BrowserRouter>
     <GlobalStyle/>
-    <Switch>
-      <Route path="/" exact>
-        
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path="/"  element={<Start/>} />
+    </Routes>
     </BrowserRouter>
   );
 }
