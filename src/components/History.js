@@ -96,7 +96,7 @@ const MainCard = styled.div`
     border-radius: 15px;
     height: 160px;
 
-    margin-top 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 
     outline: 0;
@@ -175,7 +175,7 @@ const TextInputCard = styled.div`
     border-radius: 15px;
     height: 40px;
 
-    margin-top 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
 
     outline: 0;
@@ -194,7 +194,7 @@ const FormCard = styled.div`
     border-radius: 15px;
     height: 380px;
 
-    margin-top 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
 
     outline: 0;
@@ -218,12 +218,12 @@ const InputArea = styled.div`
     select{
         font-size:   10px;
         color:  #A800FF;
-        font-style: italic
+        font-style: italic;
         background: #FFFFFF;
         text-indent: 10px;
         
         border-radius: 10px;
-        border 1px solid #A800FF;
+        border: 1px solid #A800FF;
         height: 30px;
 
         margin-right: 2%;
@@ -243,7 +243,7 @@ const InputArea = styled.div`
         text-indent: 10px;
         
         border-radius: 10px;
-        border 1px solid #A800FF;
+        border: 1px solid #A800FF;
         height: 30px;
         width: 50%;
 
