@@ -42,7 +42,10 @@ export default function Park() {
 
             <InfoCard>
                 <left>Número de Cotistas: 821 <br/> Empresa Adminstradora: MRV <br/> Data de Fundação: Jun 2020</left>
-                <right></right>
+                <right>
+                    <div1>Muito Bom <MyElipse/></div1>
+                    <div2>24,43  (R$/kWh)</div2>
+                </right>
             </InfoCard>
 
             </MainCard>
@@ -167,22 +170,52 @@ const InfoCard = styled.div`
     }
 
     right {
+        display: flex;
+        flex-direction: column;
+
         width: 40%;
         height: 80%;
         text-indent: 0px;
         line-height: 15px;
 
         margin-top: 15px;
-        margin-left: 15px;
-
-        background: #A800FF;
+        margin-right: 15px;
 
         font-size: 12px;
         font-weight: normal;
         color: #212121;
+
+        div1 {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5%;
+            margin-bottom: 10%;
+            font-size: 16px;
+            font-weight: bold;
+            text-indent: 10px;
+        }
+
+        div2 {
+            font-size: 12px;
+            font-weight: bold;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: #8DEEF2;
+            border-radius: 10px;
+        }
     }
 `;
 
+const MyElipse = styled.div`
+    margin-left: 10px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    border: 3px solid #212121;
+    background: #00FF75;
+`;
 
 const HorizontalLine = styled.div`
     height: 2px;
