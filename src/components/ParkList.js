@@ -74,7 +74,8 @@ const ParksList = styled.li`
 `;
 
 const ParkContent = styled.div`
-    padding-top:10px;    
+    padding-top:10px; 
+    padding-bottom: 45px;
     position: center;
     left: 0;
     right: 0;
