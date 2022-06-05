@@ -4,7 +4,8 @@ import InfoCard from "./InfoCard";
 import Footer from "./Footer";
 import HeaderHome from "./HeaderHome";
 import styled from 'styled-components';
-import painelSolar1 from '../imgs/painel_solar1.png'
+import painelSolar1 from '../imgs/painel_solar1.png';
+import ONU from '../imgs/onu.png';
 
 export default function Home(){
 
