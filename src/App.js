@@ -6,7 +6,6 @@ import History from "./components/History";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Start from "./components/Start";
-import BarGraph from "./components/BarGraph";
 import Menu from "./components/Menu";
 import Park from "./components/Park";
 
@@ -24,7 +23,6 @@ function App() {
       <Route path="/parklist" element={<ParkList/>}/>
       <Route path="/park" element={<Park/>}/>
       <Route path="/simulate" element={<Simulate/>}/>
-      <Route path="/testgraph" element={<BarGraph/>}/>
     </Routes>
     </BrowserRouter>
   );

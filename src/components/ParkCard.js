@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ParkCard = (props) => {
-  const CardType = props.CardType
+  const CardType = props.CardType;
+  const history = useNavigate();
 
   if (CardType == 'RecomendClient') {
     return (
-      <CardWrapper>
+      <CardWrapper onClick={() => history("/park")}>
         <CardBottom1></CardBottom1>
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>
@@ -22,7 +24,7 @@ const ParkCard = (props) => {
   }
   if (CardType == 'RecomendPublic') {
     return (
-      <CardWrapper>
+      <CardWrapper onClick={() => history("/park")}>
         <CardBottom2></CardBottom2>
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>
@@ -38,7 +40,7 @@ const ParkCard = (props) => {
   }
   if (CardType == 'Simple') {
     return (
-      <CardWrapper>
+      <CardWrapper onClick={() => history("/park")}>
         <CardBottom3></CardBottom3>
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>
@@ -54,7 +56,7 @@ const ParkCard = (props) => {
 
   if (CardType == 'Special') {
     return (
-      <CardWrapper>
+      <CardWrapper onClick={() => history("/park")}>
         <CardBottom3></CardBottom3>
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>

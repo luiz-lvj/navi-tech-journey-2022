@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import assets from "./assets";
 import ParkCard from "../components/ParkCard";
+import { useNavigate } from 'react-router-dom';
 
 const ParkData = (props) => {
-    const home = props.home
-    
+    const home = props.home;
+
 
     if (home) {
         return (
