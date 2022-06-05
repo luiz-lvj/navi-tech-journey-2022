@@ -5,8 +5,11 @@ import styled from 'styled-components';
 import assets from "../constants/assets";
 import ParkCard from './ParkCard';
 import mapPanel from '../imgs/map_panel1.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Park() {
+
+    const history = useNavigate();
 
     return (
         <ParkListStyle>
@@ -49,7 +52,7 @@ export default function Park() {
             </InfoCard>
 
             </MainCard>
-            <ButtonStyle> Simule seu histórico com este <span> parque solar!</span> </ButtonStyle>
+            <ButtonStyle onClick={() => history("/simulate")}> Simule seu histórico com este <span> parque solar!</span> </ButtonStyle>
             <Footer></Footer>
         </ParkListStyle>
     );
