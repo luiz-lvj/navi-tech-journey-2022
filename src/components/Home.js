@@ -1,11 +1,8 @@
 import React from 'react';
-import ParkCard from "./ParkCard";
-import InfoCard from "./InfoCard";
 import Footer from "./Footer";
 import HeaderHome from "./HeaderHome";
 import styled from 'styled-components';
-import painelSolar1 from '../imgs/painel_solar1.png';
-import ONU from '../imgs/onu.png';
+import ParkData from "../constants/ParkData";
 
 export default function Home(){
 
@@ -14,37 +11,15 @@ export default function Home(){
         <HomeStyle>
             <HeaderHome></HeaderHome>
             <HomeContent>
+                
                 <ParksList>
-                    {listParks.map( park =>{
-                        return(
-                        <ParkCard
-                        CardType='RecomendPublic'
-                        title ="PARQUE SOLAR MRV II"
-                        image={painelSolar1}
-                        value1="4.2"
-                        stat1="Energia Produzida"
-                        value2="125,00"
-                        stat2="Valor da Cota"
-                        />
-
-                        );
-                    } )}
-                    <ParkCard
-                    CardType='Special'
-                    title ="PROTOCOLO DE KYOTO"
-                    image={ONU}
-                    value1=""
-                    stat1="Clique neste card para saber mais sobre os créditos de carbono e a importância de preservar o planeta usando energia solar"
-                    value2=""
-                    stat2=""
-                    />
+                <ParkData home={true}/>
                 </ParksList>
             </HomeContent>
             <Footer></Footer>
         </HomeStyle>
     );
 }
-
 
 const HomeStyle = styled.div`
     display: flex;
