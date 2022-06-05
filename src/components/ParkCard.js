@@ -3,20 +3,36 @@ import styled from 'styled-components'
 import React from 'react'
 
 const ParkCard = (props) => {
-  return (
-    <CardWrapper>
-      <CardBottom></CardBottom>
-      <CardTop></CardTop>
-      <CardTitle>{props.title}</CardTitle>
-      <CardType>{props.type}</CardType>
-      <CardImage src={props.image}></CardImage>
-      <CardStat1>{props.stat1}</CardStat1>
-      <CardStat2>{props.stat2}</CardStat2>
-      <CardValue1>{props.value1} kWh</CardValue1>
-      <CardValue2>R$ {props.value2}</CardValue2>
-      <VerticalLine></VerticalLine>
-    </CardWrapper>
-  )
+  const NoSpecial = props.NoSpecial
+  if (NoSpecial){
+    return (
+      <CardWrapper>
+        <CardBottom></CardBottom>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardType>{props.type}</CardType>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+        <CardStat2>{props.stat2}</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
+  else {
+    return (
+      <CardWrapper>
+        <CardBottom></CardBottom>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardType>{props.type}</CardType>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+      </CardWrapper>
+    )
+  }
+  
 }
 
 const CardWrapper = styled.div`
