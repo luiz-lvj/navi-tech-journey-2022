@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import painelSolar1 from '../imgs/painel_solar1.png';
 import ParkCard from "./ParkCard";
 import InfoCard from "./InfoCard";
+import { useNavigate } from 'react-router-dom';
 
 export default function ParkList() {
     const listParks = [1, 2, 3, 4, 5]
@@ -23,9 +24,10 @@ export default function ParkList() {
                         stat2="Valor da Cota"
                     />
 
-                    {listParks.map(park => {
+                    {listParks.map((park, idx) => {
                         return (
                             <ParkCard
+                                key={idx}
                                 CardType='Simple'
                                 title="PARQUE SOLAR MRV II"
                                 image={painelSolar1}

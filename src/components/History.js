@@ -20,6 +20,7 @@ export default function History() {
         if (value == "") {
             value = "0";
         }
+        // for(let i = 0; )
         let tempArr = list;
         tempArr.push([myOption, value]);
         setList(tempArr);
