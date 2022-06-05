@@ -57,7 +57,7 @@ const ClienteStyle = styled.div`
 const NameStyle = styled.div`
     color: white;
 
-    font-family: "Lato", Helvetica, sans-serif
+    font-family: "Lato", Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bold;
 

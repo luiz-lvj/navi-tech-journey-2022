@@ -23,6 +23,7 @@ const CardWrapper = styled.div`
   position: relative;
   width: 350px;
   height: 105px;
+  margin-bottom: 15px;
 `
 
 const CardTop = styled.div`
