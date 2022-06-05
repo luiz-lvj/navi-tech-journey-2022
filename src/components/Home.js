@@ -87,6 +87,6 @@ const ParksList = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 0;
 
 `;
