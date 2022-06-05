@@ -1,21 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from "./Footer";
 import Header from "./Header";
 import styled from 'styled-components';
 
 
-export default function History(){
-    return(
+export default function History() {
+
+    const [myCar, setMyCar] = useState("Volvo");
+
+    const handleChange = (event) => {
+        setMyCar(event.target.value)
+    }
+
+    const [list, setList] = useState([]);
+
+    const [value, setValue] = useState("");
+
+    const addToList = () => {
+        let tempArr = list;
+        tempArr.push(value);
+        setList(tempArr);
+        setValue("");
+    };
+
+    return (
         <HistoryStyle>
             <Header></Header>
-            <MainCard></MainCard>
+            <MainCard>
+                <MainTitle>Evolução da sua conta de luz</MainTitle>
+            </MainCard>
             <MeioCard>
-                <h3>Média de Qtd. <br></br> de Energia (kWh) <br/> <br/> <span>1.2</span></h3>
-                <h3>Média de Preço <br></br> de Energia (kWh) <br/> <br/> <span>80,00</span></h3>
-                <h3>Valor Total Gasto <br></br> Anualmente (kWh) <br/> <br/> <span>3200,00</span></h3>
+                <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>1.2</span></h3>
+                <h3>Média de Preço <br></br> de Energia (kWh) <br /> <br /> <span>80,00</span></h3>
+                <h3>Valor Total Gasto <br></br> Anualmente (kWh) <br /> <br /> <span>3200,00</span></h3>
             </MeioCard>
             <TextInputCard> Seus Inputs </TextInputCard>
-            <FormCard></FormCard>
+            <FormCard>
+                <InputArea>
+                    <select value={myCar} onChange={handleChange}>
+                        <option value="Mai">Maio, 2022</option>
+                        <option value="Abr">Abril, 2022</option>
+                        <option value="Mar">Março, 2022</option>
+                        <option value="Fev">Fevereiro, 2022</option>
+                        <option value="Jan">Janeiro, 2022</option>
+                        <option value="Dez">Dezembro, 2021</option>
+                        <option value="Nov">Novembro, 2021</option>
+                        <option value="Out">Outubro, 2021</option>
+                        <option value="Set">Setembro, 2021</option>
+                        <option value="Ago">Agosto, 2021</option>
+                        <option value="Jul">Julho, 2021</option>
+                        <option value="Jun">Junho, 2021</option>
+                    </select>
+                    <input
+                        type="numeric"
+                        placeholder="Valor de Conta"
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                    />
+                    <MyButton onClick={addToList}> Add </MyButton>
+                </InputArea>
+                <ul>
+                    {list.length > 0 && list.map((item, i) => <MyInput>{item} </MyInput>)}
+                </ul>
+            </FormCard>
             <Footer></Footer>
         </HistoryStyle>
     );
@@ -35,7 +82,6 @@ const HistoryStyle = styled.div`
 const MainCard = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 90%;
 
@@ -49,6 +95,27 @@ const MainCard = styled.div`
     margin-bottom: 10px;
 
     outline: 0;
+`;
+
+const MainTitle = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+
+    background: #F0F0F0;
+
+    border: 0;
+    border-radius: 15px;
+    height: 40px;
+
+    outline: 0;
+    
+    font-size:   16px;
+    color:  #A800FF;
+    font-weight:  bold;
+    text-indent: 15px;
 `;
 
 const MeioCard = styled.div`
@@ -112,7 +179,7 @@ const TextInputCard = styled.div`
 const FormCard = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     width: 90%;
 
@@ -120,10 +187,85 @@ const FormCard = styled.div`
 
     border: 0;
     border-radius: 15px;
-    height: 230px;
+    height: 260px;
 
     margin-top 10px;
     margin-bottom: 10px;
 
     outline: 0;
+`;
+
+const InputArea = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background: #F9EDFF;
+
+    border: 0;
+    border-radius: 15px;
+    height: 50px;
+
+    outline: 0;
+
+    select{
+        font-size:   10px;
+        color:  #A800FF;
+        font-style: italic
+        background: #FFFFFF;
+        text-indent: 10px;
+        
+        border-radius: 10px;
+        border 1px solid #A800FF;
+        height: 30px;
+
+        margin-right: 2%;
+
+        option {
+            color:  #212121;
+            height: 12 px;
+            font-style:  italic;
+        }
+    }
+
+    input {
+        font-size:   10px;
+        color:  #A800FF;
+        font-style: italic
+        background: #FFFFFF;
+        text-indent: 10px;
+        
+        border-radius: 10px;
+        border 1px solid #A800FF;
+        height: 30px;
+        width: 50%;
+
+        margin-right: 2%;
+    }
+`;
+
+const MyButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
+    font-size:   10px;
+    color:  #FFFFFF;
+    font-weight: bold;
+    background: #A800FF;
+
+    border-radius: 10px;
+    height: 30px;
+`;
+
+const MyInput = styled.li`
+
+    font-size:   12px;
+    color:  #212121;
+    font-weight: bold;
+
+    height: 30px;
 `;
