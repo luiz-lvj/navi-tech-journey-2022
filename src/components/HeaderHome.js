@@ -3,8 +3,21 @@ import React from "react";
 import Cliente from "../imgs/cliente.png";
 import MenuHOME from "../imgs/icone_menu_0.png";
 import styled from 'styled-components';
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HeaderHome=() => {
+
+    const location = useLocation();
+    const history = useNavigate();
+
+    function handleClickMenu(){
+        if(location.pathname == "/menu"){
+            history(-1);
+        }
+        else{
+            history("/menu")
+        }
+    }
     
         return (
             <Box>
@@ -28,10 +41,10 @@ const HeaderHome=() => {
                 </LeftHeader>
                 
                 <Column>
-                    <HeaderLink href="./Menu">
+                    <HeaderLink>
                         <i className="icone-history">
                             <MenuStyle>
-                                <img src={MenuHOME} alt="Menu" />
+                                <img  onClick={handleClickMenu} src={MenuHOME} alt="Menu" />
                             </MenuStyle>
                         </i>
                     </HeaderLink>

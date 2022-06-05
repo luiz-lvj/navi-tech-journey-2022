@@ -11,7 +11,7 @@ const Header = () => {
 
     function handleClickMenu(){
         if(location.pathname == "/menu"){
-            history("/home");
+            history(-1);
         }
         else{
             history("/menu")
