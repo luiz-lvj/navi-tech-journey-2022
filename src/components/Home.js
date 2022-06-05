@@ -86,7 +86,7 @@ const ParksList = styled.li`
     flex-direction: column;
     justify-content: space-between;
     z-index: 0;
-
+    padding-left: 1%;
 `;
 
 
