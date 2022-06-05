@@ -61,6 +61,8 @@ const HomeStyle = styled.div`
 `;
 
 const HomeContent = styled.div`
+    padding-top:10px; 
+    padding-bottom: 30px;
     position: center;
     left: 0;
     right: 0;
