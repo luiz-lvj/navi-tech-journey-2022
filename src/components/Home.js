@@ -71,7 +71,7 @@ const HomeStyle = styled.div`
 `;
 
 const HomeContent = styled.div`
-    position: fixed;
+    position: center;
     left: 0;
     right: 0;
     top: 85px;
