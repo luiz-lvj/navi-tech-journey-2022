@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import React from 'react'
+import styled from 'styled-components';
+import React from 'react';
 
 const ParkCard = (props) => {
   const CardType = props.CardType
@@ -12,8 +12,8 @@ const ParkCard = (props) => {
         <CardTitle>{props.title}</CardTitle>
         <CardClick1>NOSSA RECOMENDAÇÃO</CardClick1>
         <CardImage src={props.image}></CardImage>
-        <CardStat1>{props.stat1}</CardStat1>
-        <CardStat2>{props.stat2}</CardStat2>
+        <CardStat1>Energia Produzida</CardStat1>
+        <CardStat2>Valor da Cota</CardStat2>
         <CardValue1>{props.value1} kWh</CardValue1>
         <CardValue2>R$ {props.value2}</CardValue2>
         <VerticalLine></VerticalLine>
@@ -28,8 +28,8 @@ const ParkCard = (props) => {
         <CardTitle>{props.title}</CardTitle>
         <CardClick2>PARQUE SOLAR EM ALTA</CardClick2>
         <CardImage src={props.image}></CardImage>
-        <CardStat1>{props.stat1}</CardStat1>
-        <CardStat2>{props.stat2}</CardStat2>
+        <CardStat1>Energia Produzida</CardStat1>
+        <CardStat2>Valor da Cota</CardStat2>
         <CardValue1>{props.value1} kWh</CardValue1>
         <CardValue2>R$ {props.value2}</CardValue2>
         <VerticalLine></VerticalLine>
@@ -43,8 +43,8 @@ const ParkCard = (props) => {
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>
         <CardImage src={props.image}></CardImage>
-        <CardStat1>{props.stat1}</CardStat1>
-        <CardStat2>{props.stat2}</CardStat2>
+        <CardStat1>Energia Produzida</CardStat1>
+        <CardStat2>Valor da Cota</CardStat2>
         <CardValue1>{props.value1} kWh</CardValue1>
         <CardValue2>R$ {props.value2}</CardValue2>
         <VerticalLine></VerticalLine>
