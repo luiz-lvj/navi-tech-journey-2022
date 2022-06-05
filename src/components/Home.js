@@ -18,10 +18,9 @@ export default function Home(){
                     {listParks.map( park =>{
                         return(
                         <ParkCard
-                        NoSpecial = {true}
+                        CardType='RecomendPublic'
                         title ="PARQUE SOLAR MRV II"
                         image={painelSolar1}
-                        type ="NOSSA RECOMENDAÇÃO"
                         value1="4.2"
                         stat1="Energia Produzida"
                         value2="125,00"
@@ -31,10 +30,9 @@ export default function Home(){
                         );
                     } )}
                     <ParkCard
-                    NoSpecial = {false}
+                    CardType='Special'
                     title ="PROTOCOLO DE KYOTO"
                     image={ONU}
-                    type ="INFORMATIVO"
                     value1=""
                     stat1="Clique neste card para saber mais sobre os créditos de carbono e a importância de preservar o planeta usando energia solar"
                     value2=""
