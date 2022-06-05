@@ -1,32 +1,64 @@
 import styled from 'styled-components'
-
 import React from 'react'
 
 const ParkCard = (props) => {
-  const NoSpecial = props.NoSpecial
-  if (NoSpecial){
+  const CardType = props.CardType
+
+    if (CardType=='RecomendClient'){
+      return (
+        <CardWrapper>
+          <CardBottom1></CardBottom1>
+          <CardTop></CardTop>
+          <CardTitle>{props.title}</CardTitle>
+          <CardClick1>NOSSA RECOMENDAÇÃO</CardClick1>
+          <CardImage src={props.image}></CardImage>
+          <CardStat1>{props.stat1}</CardStat1>
+          <CardStat2>{props.stat2}</CardStat2>
+          <CardValue1>{props.value1} kWh</CardValue1>
+          <CardValue2>R$ {props.value2}</CardValue2>
+          <VerticalLine></VerticalLine>
+        </CardWrapper>
+      )
+    }
+    if (CardType=='RecomendPublic'){
+      return (
+        <CardWrapper>
+          <CardBottom2></CardBottom2>
+          <CardTop></CardTop>
+          <CardTitle>{props.title}</CardTitle>
+          <CardClick2>PARQUE SOLAR EM ALTA</CardClick2>
+          <CardImage src={props.image}></CardImage>
+          <CardStat1>{props.stat1}</CardStat1>
+          <CardStat2>{props.stat2}</CardStat2>
+          <CardValue1>{props.value1} kWh</CardValue1>
+          <CardValue2>R$ {props.value2}</CardValue2>
+          <VerticalLine></VerticalLine>
+        </CardWrapper>
+      )
+    }
+    if (CardType=='Simple'){
+      return (
+        <CardWrapper>
+          <CardBottom3></CardBottom3>
+          <CardTop></CardTop>
+          <CardTitle>{props.title}</CardTitle>
+          <CardImage src={props.image}></CardImage>
+          <CardStat1>{props.stat1}</CardStat1>
+          <CardStat2>{props.stat2}</CardStat2>
+          <CardValue1>{props.value1} kWh</CardValue1>
+          <CardValue2>R$ {props.value2}</CardValue2>
+          <VerticalLine></VerticalLine>
+        </CardWrapper>
+      )
+    }
+ 
+    if (CardType=='Special') {
     return (
       <CardWrapper>
-        <CardBottom></CardBottom>
+        <CardBottom3></CardBottom3>
         <CardTop></CardTop>
         <CardTitle>{props.title}</CardTitle>
-        <CardType>{props.type}</CardType>
-        <CardImage src={props.image}></CardImage>
-        <CardStat1>{props.stat1}</CardStat1>
-        <CardStat2>{props.stat2}</CardStat2>
-        <CardValue1>{props.value1} kWh</CardValue1>
-        <CardValue2>R$ {props.value2}</CardValue2>
-        <VerticalLine></VerticalLine>
-      </CardWrapper>
-    )
-  }
-  else {
-    return (
-      <CardWrapper>
-        <CardBottom></CardBottom>
-        <CardTop></CardTop>
-        <CardTitle>{props.title}</CardTitle>
-        <CardType>{props.type}</CardType>
+        <CardClick3>INFORMATIVO</CardClick3>
         <CardImage src={props.image}></CardImage>
         <CardStat>{props.stat1}</CardStat>
       </CardWrapper>
@@ -51,7 +83,27 @@ const CardTop = styled.div`
 `
 
 
-const CardBottom = styled.div`
+const CardBottom1 = styled.div`
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  border-radius: 15px;
+  top: 5px;
+  z-index: -1;
+  background-color: #A800FF;
+  
+`
+const CardBottom2 = styled.div`
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  border-radius: 15px;
+  top: 5px;
+  z-index: -1;
+  background-color: #8DEEF2;
+  
+`
+const CardBottom3 = styled.div`
   position: absolute;
   width: 350px;
   height: 100px;
@@ -59,9 +111,12 @@ const CardBottom = styled.div`
   top: 5px;
   z-index: -1;
   background-color: black;
+  
 `
 
-const CardType = styled.div`
+
+
+const CardClick1 = styled.div`
   height: 20px;
   position: absolute;
   left: 160px;
@@ -70,6 +125,36 @@ const CardType = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
+  color: #A800FF;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+`
+const CardClick2 = styled.div`
+  height: 20px;
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #8DEEF2;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+`
+
+const CardClick3 = styled.div`
+  height: 20px;
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: black;
   line-height: 12px;
   display: flex;
   align-items: center;
