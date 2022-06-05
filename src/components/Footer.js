@@ -8,53 +8,60 @@ import PanelYET from "../imgs/icon_panel_1.png";
 import SimGO from "../imgs/icon_sim_0.png";
 import SimYET from "../imgs/icon_sim_1.png";
 import styled from 'styled-components';
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Footer = () => {
-    // constructor(){
-    //     super()
-         
-    //     this.state = {msg : 'Hi, There!'}
-         
-    //     handleClick = () {
-    //         this.setState({msg : 'Welcome to the React world!'})
-    //     }
-    // }
+    const history = useNavigate();
+    const location = useLocation();
 
     return (
         <Box>
+            {console.log(location)}
             <Column>
-                <FooterLink href="./home">
+                <FooterLink >
                     <i className="icone-home">
                         <HomeStyle>
-                            <img src={HomeGO} alt="Home" />
+                            <img 
+                            onClick={() => history("/home")}
+                            src={location.pathname == "/home" ? HomeYET : HomeGO}
+                            alt="Home" />
                         </HomeStyle>
                     </i>
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./history">
+                <FooterLink >
                     <i className="icone-history">
                         <HistStyle>
-                            <img src={HistGO} alt="History" />
+                            <img
+                            onClick={() => history("/history")}
+                            src={location.pathname == "/history" ? HomeYET : HistGO}
+                            alt="History" />
                         </HistStyle>
                     </i>
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./parklist">
+                <FooterLink >
                     <i className="icone-parks">
                         <PanelStyle>
-                            <img src={PanelGO} alt="Parks" />
+                            <img 
+                            onClick={() => history("/parklist")}
+                            src={location.pathname == "/parklist" ?  PanelYET : PanelGO}
+                            alt="Parks" />
                         </PanelStyle>
                     </i>
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./simulate">
+                <FooterLink>
                     <i className="icone-simulate">
                         <SimStyle>
-                            <img src={SimGO} alt="Simulate" />
+                            <img  
+                            onClick={() => history("/simulate")}
+                            src={ location.pathname == "/simulate" ? SimYET : SimGO }
+                            alt="Simulate" />
                         </SimStyle>
                     </i>
                 </FooterLink>
