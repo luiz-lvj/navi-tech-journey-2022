@@ -27,6 +27,8 @@ const Header = () => {
                 return <span>Seu Histórico</span>
             case "/parklist":
                 return <span>Nossos Parques</span>
+            case "/park":
+                return <span>Conheça mais</span>
             case "/simulate":
                 return <span>Simulação</span>
             default:

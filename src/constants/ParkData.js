@@ -5,6 +5,7 @@ import ParkCard from "../components/ParkCard";
 
 const ParkData = (props) => {
     const home = props.home
+    
 
     if (home) {
         return (
@@ -89,18 +90,6 @@ const ParkData = (props) => {
 }
 
 export default ParkData;
-
-const ParkListStyle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 740px;
-    overflow: scroll;
-    background: #FFFFFF;
-    
-`;
 
 const ParksList = styled.li`
     display: flex;
