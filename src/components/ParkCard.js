@@ -46,78 +46,78 @@ const CardBottom = styled.div`
 `
 
 const CardType = styled.div`
-height: 20px;
-position: absolute;
-left: 160px;
-top: 0px;
-font-family: Lato, Helvetica, sans-serif
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-display: flex;
-align-items: center
+  height: 20px;
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
 `
 
 const CardTitle = styled.div `
-position: absolute;
-top: 14px;
-left: 150px;
-height: 30px;
-font-family: Lato, Helvetica, sans-serif
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-display: flex;
-align-items: center;
+  position: absolute;
+  top: 14px;
+  left: 150px;
+  height: 30px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
 `
 
 const CardText = styled.div`
-position: absolute;
-left: 140px;
-top: 47px;
-width: 200px;
-height: 40px;
-font-family: Lato, Helvetica, sans-serif
-font-style: italic;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-display: flex;
-align-items: center;
-text-align: center;
+  position: absolute;
+  left: 140px;
+  top: 47px;
+  width: 200px;
+  height: 40px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 `
 
 const CardImage = styled.img`
-top: 0;
-position: absolute;
-height: 100px;
-width: 142.5px;
-border-radius: 15px 0 0 15px;
-clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%)
+  top: 0;
+  position: absolute;
+  height: 100px;
+  width: 142.5px;
+  border-radius: 15px 0 0 15px;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
 `
 
 
 const CardStat1 = styled.div`
-position: absolute;
-top: 46px;
-width: 100px;
-left: 140px;
-height: 20px;
-font-family: Lato, Helvetica, sans-serif
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-display: flex;
-align-items: center;
-text-align: center;
-display: inline-block;
+  position: absolute;
+  top: 46px;
+  width: 100px;
+  left: 140px;
+  height: 20px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
 `
 
-  const CardValue1 = styled.div`
-  font-family: Lato, Helvetica, sans-serif
+const CardValue1 = styled.div`
+  font-family: 'Lato', Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -131,15 +131,15 @@ display: inline-block;
   width: 100px;
   height: 25px;
   display: inline-block;
-  `
+`
 
-  const CardStat2 = styled.div`
+const CardStat2 = styled.div`
   position: absolute;
   top: 46px;
   width: 100px;
   left: 240px;
   height: 20px;
-  font-family: Lato, Helvetica, sans-serif
+  font-family: 'Lato', Helvetica, sans-serif;
   font-style: normal;
   text-align: center;
   font-weight: 400;
@@ -148,11 +148,11 @@ display: inline-block;
   display: flex;
   align-items: center;
   display: inline-block;
-  `
+`
 
 
-  const CardValue2 = styled.div`
-  font-family: Lato, Helvetica, sans-serif
+const CardValue2 = styled.div`
+  font-family: 'Lato', Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -166,15 +166,15 @@ display: inline-block;
   width: 100px;
   height: 25px;
   display: inline-block;
-  `
+`
 
-  const VerticalLine = styled.div`
+const VerticalLine = styled.div`
   position: absolute;
   width: 0px;
   height: 40px;
   left: 240px;
   top: 45px;
   border-left: 1px solid #D9D9D9;
-  `
+`
 
-export default ParkCard
+export default ParkCard;
