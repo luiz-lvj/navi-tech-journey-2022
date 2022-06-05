@@ -12,14 +12,13 @@ export default function Home(){
             <HeaderHome></HeaderHome>
 
             <ParkCard
-            title ="title"
+            title ="PARQUE SOLAR MRV II"
             image={painelSolar1}
-            type ="type"
-            text="text"
-            value1="value1"
-            stat1="stat1"
-            value2="value2"
-            stat2="stat2"
+            type ="NOSSA RECOMENDAÇÃO"
+            value1="4.2"
+            stat1="Energia Produzida"
+            value2="125,00"
+            stat2="Valor da Cota"
             />
 
             <InfoCard

@@ -49,6 +49,7 @@ height: 20px;
 position: absolute;
 left: 160px;
 top: 0px;
+font-family: Lato, Helvetica, sans-serif
 font-style: normal;
 font-weight: 400;
 font-size: 10px;
@@ -62,6 +63,7 @@ position: absolute;
 top: 14px;
 left: 150px;
 height: 30px;
+font-family: Lato, Helvetica, sans-serif
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -76,6 +78,7 @@ left: 140px;
 top: 47px;
 width: 200px;
 height: 40px;
+font-family: Lato, Helvetica, sans-serif
 font-style: italic;
 font-weight: 400;
 font-size: 10px;
@@ -101,6 +104,7 @@ top: 46px;
 width: 100px;
 left: 140px;
 height: 20px;
+font-family: Lato, Helvetica, sans-serif
 font-style: normal;
 font-weight: 400;
 font-size: 10px;
@@ -112,6 +116,7 @@ display: inline-block;
 `
 
   const CardValue1 = styled.div`
+  font-family: Lato, Helvetica, sans-serif
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -133,6 +138,7 @@ display: inline-block;
   width: 100px;
   left: 240px;
   height: 20px;
+  font-family: Lato, Helvetica, sans-serif
   font-style: normal;
   text-align: center;
   font-weight: 400;
@@ -145,6 +151,7 @@ display: inline-block;
 
 
   const CardValue2 = styled.div`
+  font-family: Lato, Helvetica, sans-serif
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
