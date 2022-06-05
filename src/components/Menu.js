@@ -2,9 +2,20 @@ import React from 'react';
 import Footer from "./Footer";
 import Header from "./Header";
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 
-export default function Menu(){
+export default function Menu(props){
+    const history = useNavigate();
+
+    function handleClickMenu(){
+        if(props.backLocation){
+            history(props.backLocation);
+        }
+        else{
+            history("/home");
+        }
+    }
     return(
         <Box>
             <Header/>
