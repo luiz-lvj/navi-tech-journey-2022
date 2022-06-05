@@ -5,9 +5,10 @@ export default function BarGraph(props){
 
     const widthBar = widthInput;
     const heightBar = widthBar*200/350;
-    const title = "Título 1"
+    const title = props.title
     const months = props.months;
     const inputs = props.numbers;
+    
 
     let sumInputs = 0
     let maxInput = inputs[0]
