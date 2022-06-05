@@ -105,7 +105,7 @@ const InfoHomePage = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding-right: 3%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 
 `;
 
