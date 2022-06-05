@@ -14,9 +14,9 @@ export default function ParkList() {
             <ParkContent>
                 <ParksList>
                     <ParkCard
+                        CardType='Simple'
                         title="PARQUE SOLAR MRV II"
                         image={painelSolar1}
-                        type="NOSSA RECOMENDAÇÃO"
                         value1="4.2"
                         stat1="Energia Produzida"
                         value2="125,00"
@@ -26,9 +26,9 @@ export default function ParkList() {
                     {listParks.map(park => {
                         return (
                             <ParkCard
+                                CardType='Simple'
                                 title="PARQUE SOLAR MRV II"
                                 image={painelSolar1}
-                                type="NOSSA RECOMENDAÇÃO"
                                 value1="4.2"
                                 stat1="Energia Produzida"
                                 value2="125,00"
@@ -41,6 +41,7 @@ export default function ParkList() {
 
 
                     <InfoCard
+                        CardType='Simple'
                         title="title"
                         image={painelSolar1}
                         type="type"
@@ -74,7 +75,7 @@ const ParksList = styled.li`
 `;
 
 const ParkContent = styled.div`
-    padding-top:10px; 
+    padding-top:20px; 
     padding-bottom: 45px;
     position: center;
     left: 0;
