@@ -10,9 +10,9 @@ export default function History(){
             <Header></Header>
             <MainCard></MainCard>
             <MeioCard>
-                <div>A</div>
-                <div>B</div>
-                <div>C</div>
+                <h3>Média de Qtd. <br></br> de Energia (kWh) <br/> <br/> <span>1.2</span></h3>
+                <h3>Média de Preço <br></br> de Energia (kWh) <br/> <br/> <span>80,00</span></h3>
+                <h3>Valor Total Gasto <br></br> Anualmente (kWh) <br/> <br/> <span>3200,00</span></h3>
             </MeioCard>
             <TextInputCard> Seus Inputs </TextInputCard>
             <FormCard></FormCard>
@@ -64,12 +64,21 @@ const MeioCard = styled.div`
 
     outline: 0;
 
-    div {
+    h3 {
+        font-size:  10px;
+        color:  #212121;
+
         border-left: 2px solid #D9D9D9;
         text-align: center;
         float: left;
         width: 33%;
         height: 40px;
+
+        span{
+            font-size:  16px;
+            font-weight: bold;
+        }
+
         :first-child{
             border-left: none
         };

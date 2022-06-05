@@ -36,7 +36,7 @@ const Footer = () => {
                         <HistStyle>
                             <img
                             onClick={() => history("/history")}
-                            src={location.pathname == "/history" ? HomeYET : HistGO}
+                            src={location.pathname == "/history" ? HistYET : HistGO}
                             alt="History" />
                         </HistStyle>
                     </i>
