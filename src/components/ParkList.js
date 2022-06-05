@@ -23,7 +23,7 @@ const ParkListStyle = styled.div`
     width: 100%;
     height: 740px;
     overflow: scroll;
-    background: #FFFFFF;
+    background: #F5F5F5;
     
 `;
 

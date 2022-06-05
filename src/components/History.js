@@ -152,7 +152,7 @@ const MeioCard = styled.div`
         }
 
         :first-child{
-            border-left: none
+            border-left: none;
         };
     }
 `;
@@ -164,7 +164,7 @@ const TextInputCard = styled.div`
     align-items: center;
     width: 90%;
 
-    font-family: Lato, Helvetica, sans-serif
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size:   16px;
     color:  #212121;
     font-weight:  bold;
