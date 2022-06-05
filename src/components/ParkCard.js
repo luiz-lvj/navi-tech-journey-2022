@@ -4,55 +4,55 @@ import React from 'react'
 const ParkCard = (props) => {
   const CardType = props.CardType
 
-    if (CardType=='RecomendClient'){
-      return (
-        <CardWrapper>
-          <CardBottom1></CardBottom1>
-          <CardTop></CardTop>
-          <CardTitle>{props.title}</CardTitle>
-          <CardClick1>NOSSA RECOMENDAÇÃO</CardClick1>
-          <CardImage src={props.image}></CardImage>
-          <CardStat1>{props.stat1}</CardStat1>
-          <CardStat2>{props.stat2}</CardStat2>
-          <CardValue1>{props.value1} kWh</CardValue1>
-          <CardValue2>R$ {props.value2}</CardValue2>
-          <VerticalLine></VerticalLine>
-        </CardWrapper>
-      )
-    }
-    if (CardType=='RecomendPublic'){
-      return (
-        <CardWrapper>
-          <CardBottom2></CardBottom2>
-          <CardTop></CardTop>
-          <CardTitle>{props.title}</CardTitle>
-          <CardClick2>PARQUE SOLAR EM ALTA</CardClick2>
-          <CardImage src={props.image}></CardImage>
-          <CardStat1>{props.stat1}</CardStat1>
-          <CardStat2>{props.stat2}</CardStat2>
-          <CardValue1>{props.value1} kWh</CardValue1>
-          <CardValue2>R$ {props.value2}</CardValue2>
-          <VerticalLine></VerticalLine>
-        </CardWrapper>
-      )
-    }
-    if (CardType=='Simple'){
-      return (
-        <CardWrapper>
-          <CardBottom3></CardBottom3>
-          <CardTop></CardTop>
-          <CardTitle>{props.title}</CardTitle>
-          <CardImage src={props.image}></CardImage>
-          <CardStat1>{props.stat1}</CardStat1>
-          <CardStat2>{props.stat2}</CardStat2>
-          <CardValue1>{props.value1} kWh</CardValue1>
-          <CardValue2>R$ {props.value2}</CardValue2>
-          <VerticalLine></VerticalLine>
-        </CardWrapper>
-      )
-    }
- 
-    if (CardType=='Special') {
+  if (CardType == 'RecomendClient') {
+    return (
+      <CardWrapper>
+        <CardBottom1></CardBottom1>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardClick1>NOSSA RECOMENDAÇÃO</CardClick1>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+        <CardStat2>{props.stat2}</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
+  if (CardType == 'RecomendPublic') {
+    return (
+      <CardWrapper>
+        <CardBottom2></CardBottom2>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardClick2>PARQUE SOLAR EM ALTA</CardClick2>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+        <CardStat2>{props.stat2}</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
+  if (CardType == 'Simple') {
+    return (
+      <CardWrapper>
+        <CardBottom3></CardBottom3>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+        <CardStat2>{props.stat2}</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
+
+  if (CardType == 'Special') {
     return (
       <CardWrapper>
         <CardBottom3></CardBottom3>
@@ -64,7 +64,7 @@ const ParkCard = (props) => {
       </CardWrapper>
     )
   }
-  
+
 }
 
 const CardWrapper = styled.div`
@@ -160,7 +160,7 @@ const CardClick3 = styled.div`
   align-items: center;
 `
 
-const CardTitle = styled.div `
+const CardTitle = styled.div`
   position: absolute;
   top: 14px;
   left: 150px;
