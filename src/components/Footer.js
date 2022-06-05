@@ -11,10 +11,20 @@ import styled from 'styled-components';
 
 
 const Footer = () => {
+    // constructor(){
+    //     super()
+         
+    //     this.state = {msg : 'Hi, There!'}
+         
+    //     handleClick = () {
+    //         this.setState({msg : 'Welcome to the React world!'})
+    //     }
+    // }
+
     return (
         <Box>
             <Column>
-                <FooterLink href="./Home">
+                <FooterLink href="./home">
                     <i className="icone-home">
                         <HomeStyle>
                             <img src={HomeGO} alt="Home" />
@@ -23,7 +33,7 @@ const Footer = () => {
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./History">
+                <FooterLink href="./history">
                     <i className="icone-history">
                         <HistStyle>
                             <img src={HistGO} alt="History" />
@@ -32,7 +42,7 @@ const Footer = () => {
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./ParkList">
+                <FooterLink href="./parklist">
                     <i className="icone-parks">
                         <PanelStyle>
                             <img src={PanelGO} alt="Parks" />
@@ -41,7 +51,7 @@ const Footer = () => {
                 </FooterLink>
             </Column>
             <Column>
-                <FooterLink href="./Simulate">
+                <FooterLink href="./simulate">
                     <i className="icone-simulate">
                         <SimStyle>
                             <img src={SimGO} alt="Simulate" />
@@ -54,32 +64,28 @@ const Footer = () => {
 };
 export default Footer;
 const HomeStyle = styled.div`
- margin-left: 54px; 
- margin-top: 9px;
+    margin-top: 12px;
     img{
         width: 30px;
         height: 30px;
     }
 `;
 const HistStyle = styled.div`
- margin-left: 54px;
- margin-top: 9px;
+    margin-top: 12px;
     img{
         width: 30px;
         height: 30px;
     }
 `;
 const PanelStyle = styled.div`
- margin-left: 54px; 
- margin-top: 9px;
+    margin-top: 12px;
     img{
         width: 30px;
         height: 30px;
     }
 `;
 const SimStyle = styled.div`
- margin-left: 54px; 
- margin-top: 9px;
+    margin-top: 12px;
     img{
         width: 30px;
         height: 30px;
@@ -87,13 +93,17 @@ const SimStyle = styled.div`
 `;
 
 export const Box = styled.div`
-height: 55px;
-width: 390px;
-margin-top: 734px;
-border-radius: 0px;
-background: white;
-display: flex;
-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-right: 12%;
+    height: 55px;
+    border-radius: 0px;
+    background: white;
 `;
 
 export const Column = styled.div`

@@ -15,7 +15,7 @@ export default function Start(){
                 Começar a economizar <br/> com a revolução solar
             </h2>
 
-            <ArrowStyle onClick={() => history("/home")}>
+            <ArrowStyle onClick={() => history("/login")}>
                 <img src={arrow} alt=""/>
             </ArrowStyle>
 

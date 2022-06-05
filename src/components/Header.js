@@ -2,62 +2,77 @@
 import React from "react";
 import Menu from "../imgs/icone_menu_1.png";
 import Logo from "../imgs/Logo_Purple.png";
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components';
 
-const Header=() => {
+const Header = () => {
 
-        return (
-            <Box>
-                <Column>
-                        <i className="Logo">
-                            <LogoStyle>
-                                <img src={Logo} alt="Logo" />
-                            </LogoStyle>
-                        </i>
-                </Column>
-                <Column>
-                        <i className="Nome-cliente">
-                            <NameStyle>
-                                
-                                    Seu histórico
-                                
-                            </NameStyle>
-                        </i>
-                </Column>
-                <Column>
-                    <HeaderLink href="./Menu">
-                        <i className="icone-history">
-                            <MenuStyle>
-                                <img src={Menu} alt="Menu" />
-                            </MenuStyle>
-                        </i>
-                    </HeaderLink>
-                </Column>
-            </Box>
-    );   
+    function HeaderView() {
+        const location = useLocation();
+        switch (location.pathname) {
+            case "/home":
+                return <span>Home</span>
+            case "/history":
+                return <span>Seu Histórico</span>
+            case "/parklist":
+                return <span>Nossos Parques</span>
+            case "/simulate":
+                return <span>Simulação</span>
+            default:
+                return <span> </span>
+        }
+    }
+
+    return (
+        <Box>
+            <LeftHeader>
+                <i className="Logo">
+                    <LogoStyle>
+                        <img src={Logo} alt="Logo" />
+                    </LogoStyle>
+                </i>
+                <i className="Nome-cliente">
+                    <NameStyle>
+
+                        {HeaderView()}
+
+                    </NameStyle>
+                </i>
+            </LeftHeader>
+
+            <Column>
+                <HeaderLink href="./Menu">
+                    <i className="icone-history">
+                        <MenuStyle>
+                            <img src={Menu} alt="Menu" />
+                        </MenuStyle>
+                    </i>
+                </HeaderLink>
+            </Column>
+        </Box>
+    );
 };
 export default Header;
 
 const LogoStyle = styled.div`
- margin-left: 0px; 
- margin-top: 20px;
+    margin-top: 10 px;
     img{
-        width: 100px;
-        height: 45.8px;
+        height: 50px;
     }
-
 `;
 const NameStyle = styled.div`
- margin-left: 0px; 
- margin-top: 40px;
- color: #A800FF;
- font-size: 14px;
+    
+    color: #A800FF;
+    margin-top: 20px;
+    margin-left: 15px;
 
+    font-family: "Lato", Helvetica, sans-serif
+    font-size: 16px;
+    font-weight: bold;
 
 `;
 const MenuStyle = styled.div`
- margin-left: 140px; 
- margin-top: 20px;
+    margin-top: 15px;
     img{
         width: 30px;
         height: 30px;
@@ -66,19 +81,36 @@ const MenuStyle = styled.div`
 
 
 export const Box = styled.div`
-height: 90px;
-width: 390px;
-margin-top: 0px;
-border-radius: 0px;
-background: white;
-display: flex;
-bottom: 0;
+    display: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0 !important;
+    height: 80px;
+    width: 100%;
+    min-width: 360px;
+    background: #FFFFFF;
+    flex-direction: row;
+    bottom: 0;
+    padding-left: 0%;
+    padding-right: 7%;
+    padding-top: 10px;
+
 `;
 
 export const Column = styled.div`
-display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const HeaderLink = styled.a`
 `;
 
+const LeftHeader = styled.div`
+    display: flex;
+    align-items: center;
+    text-align: center
+    justify-content: center;
+    width: 80%;
+`;

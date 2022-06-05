@@ -40,13 +40,13 @@ export default function Menu(){
 const Box = styled.div`
 padding-top:100px;
 background: #FFFFFF;
-width: 390px;
-height:789px;
+width: 100%;
+height:740px;
 `;
 const MenuStyle = styled.div`
 background: #FFFFFF;
 border-bottom:1px solid #A800FF;
-width: 390px;
+width: 100%;
 height:55px;
 padding-top: 20px;
 text-align: center;

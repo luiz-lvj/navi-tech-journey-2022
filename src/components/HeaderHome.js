@@ -4,10 +4,11 @@ import Cliente from "../imgs/cliente.png";
 import MenuHOME from "../imgs/icone_menu_0.png";
 import styled from 'styled-components';
 
-const Header=() => {
+const HeaderHome=() => {
     
         return (
             <Box>
+                <LeftHeader>
                 <Column>
                         <i className="Foto-perfil">
                             <ClienteStyle>
@@ -24,6 +25,8 @@ const Header=() => {
                             </NameStyle>
                         </i>
                 </Column>
+                </LeftHeader>
+                
                 <Column>
                     <HeaderLink href="./Menu">
                         <i className="icone-history">
@@ -39,28 +42,30 @@ const Header=() => {
     
     
 };
-export default Header;
+export default HeaderHome;
 
 const ClienteStyle = styled.div`
- margin-left: 40px; 
- margin-top: 30px;
+    margin-top: 25px;
     img{
         width: 70px;
         height: 70px;
     }
-border: 5px solid #8DEEF2;
-border-radius: 75px;
+    background: #8DEEF2; 
+    border: 5px solid #8DEEF2;
+    border-radius: 90px;
 `;
 const NameStyle = styled.div`
- margin-left: 15px; 
- margin-top: 57px;
- color: white;
- font-size: 20px;
+    color: white;
+
+    font-family: "Lato", Helvetica, sans-serif
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-top: 20px;
 
 `;
 const MenuStyle = styled.div`
- margin-left: 54px; 
- margin-top: 20px;
+    margin-top: 15px;
     img{
         width: 30px;
         height: 30px;
@@ -69,19 +74,37 @@ const MenuStyle = styled.div`
 
 
 export const Box = styled.div`
-height: 90px;
-width: 390px;
-margin-top: 0px;
-border-radius: 0px;
-background: #A800FF;
-display: flex;
-bottom: 0;
+    display: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0 !important;
+    height: 80px;
+    width: 100%;
+    min-width: 360px;
+    background: #A800FF;
+    flex-direction: row;
+    bottom: 0;
+    padding-left: 10%;
+    padding-right: 7%;
+    padding-top: 10px;
+
 `;
 
 export const Column = styled.div`
-display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 `;
 
 export const HeaderLink = styled.a`
+`;
+
+const LeftHeader = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
 `;
 
