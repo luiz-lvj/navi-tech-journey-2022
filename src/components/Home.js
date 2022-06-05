@@ -59,7 +59,6 @@ const HomeStyle = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 740px;
 
     background: #F5F5F5;
         
@@ -91,9 +90,7 @@ const ParksList = styled.li`
 
 
 const TopHomePage = styled.div`
-    background: #FFFFFF;
     border-radius: 10px;
-    height: 200px;
 `;
 
 const InfoHomePage = styled.div`
@@ -105,7 +102,7 @@ const InfoHomePage = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding-right: 3%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 `;
 
@@ -147,6 +144,8 @@ const DataInfos = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    background: #FFFFFF;
+    margin-bottom: 40px;
 
     border: 0;
     border-radius: 15px;
