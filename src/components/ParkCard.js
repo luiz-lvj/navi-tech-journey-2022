@@ -38,6 +38,22 @@ const ParkCard = (props) => {
       </CardWrapper>
     )
   }
+  if (CardType == 'Private') {
+    return (
+      <CardWrapper onClick={() => history("/park")}>
+        <CardBottom4></CardBottom4>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardClick4>FINANCIAMENTO PRÓPRIO</CardClick4>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>Energia Produzida</CardStat1>
+        <CardStat2>Valor Mensal</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
   if (CardType == 'Simple') {
     return (
       <CardWrapper onClick={() => history("/park")}>
@@ -116,6 +132,17 @@ const CardBottom3 = styled.div`
   
 `
 
+const CardBottom4 = styled.div`
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  border-radius: 15px;
+  top: 5px;
+  z-index: -1;
+  background-color: #D9D9D9;
+  
+`
+
 
 
 const CardClick1 = styled.div`
@@ -157,6 +184,21 @@ const CardClick3 = styled.div`
   font-weight: 400;
   font-size: 10px;
   color: black;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+`
+
+const CardClick4 = styled.div`
+  height: 20px;
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #D9D9D9;
   line-height: 12px;
   display: flex;
   align-items: center;
