@@ -3,20 +3,36 @@ import styled from 'styled-components'
 import React from 'react'
 
 const ParkCard = (props) => {
-  return (
-    <CardWrapper>
-      <CardBottom></CardBottom>
-      <CardTop></CardTop>
-      <CardTitle>{props.title}</CardTitle>
-      <CardType>{props.type}</CardType>
-      <CardImage src={props.image}></CardImage>
-      <CardStat1>{props.stat1}</CardStat1>
-      <CardStat2>{props.stat2}</CardStat2>
-      <CardValue1>{props.value1} kWh</CardValue1>
-      <CardValue2>R$ {props.value2}</CardValue2>
-      <VerticalLine></VerticalLine>
-    </CardWrapper>
-  )
+  const NoSpecial = props.NoSpecial
+  if (NoSpecial){
+    return (
+      <CardWrapper>
+        <CardBottom></CardBottom>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardType>{props.type}</CardType>
+        <CardImage src={props.image}></CardImage>
+        <CardStat1>{props.stat1}</CardStat1>
+        <CardStat2>{props.stat2}</CardStat2>
+        <CardValue1>{props.value1} kWh</CardValue1>
+        <CardValue2>R$ {props.value2}</CardValue2>
+        <VerticalLine></VerticalLine>
+      </CardWrapper>
+    )
+  }
+  else {
+    return (
+      <CardWrapper>
+        <CardBottom></CardBottom>
+        <CardTop></CardTop>
+        <CardTitle>{props.title}</CardTitle>
+        <CardType>{props.type}</CardType>
+        <CardImage src={props.image}></CardImage>
+        <CardStat>{props.stat1}</CardStat>
+      </CardWrapper>
+    )
+  }
+  
 }
 
 const CardWrapper = styled.div`
@@ -97,8 +113,6 @@ const CardImage = styled.img`
   border-radius: 15px 0 0 15px;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
 `
-
-
 const CardStat1 = styled.div`
   position: absolute;
   top: 46px;
@@ -114,6 +128,24 @@ const CardStat1 = styled.div`
   align-items: center;
   text-align: center;
   display: inline-block;
+`
+
+const CardStat = styled.div`
+  position: absolute;
+  top: 46px;
+  width: 200px;
+  left: 140px;
+  height: 20px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 9px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  font-style: italic;
 `
 
 const CardValue1 = styled.div`

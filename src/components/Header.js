@@ -2,10 +2,21 @@
 import React from "react";
 import Menu from "../imgs/icone_menu_1.png";
 import Logo from "../imgs/Logo_Purple.png";
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Header = () => {
+    const location = useLocation();
+    const history = useNavigate();
+
+    function handleClickMenu(){
+        if(location.pathname == "/menu"){
+            history(-1);
+        }
+        else{
+            history("/menu")
+        }
+    }
 
     function HeaderView() {
         const location = useLocation();
@@ -41,10 +52,13 @@ const Header = () => {
             </LeftHeader>
 
             <Column>
-                <HeaderLink href="./Menu">
+                <HeaderLink >
                     <i className="icone-history">
                         <MenuStyle>
-                            <img src={Menu} alt="Menu" />
+                            <img 
+                            onClick={handleClickMenu}
+                            src={Menu}
+                            alt="Menu" />
                         </MenuStyle>
                     </i>
                 </HeaderLink>
@@ -66,7 +80,7 @@ const NameStyle = styled.div`
     margin-top: 20px;
     margin-left: 15px;
 
-    font-family: "Lato", Helvetica, sans-serif
+    font-family: "Lato", Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bold;
 
@@ -110,7 +124,7 @@ export const HeaderLink = styled.a`
 const LeftHeader = styled.div`
     display: flex;
     align-items: center;
-    text-align: center
+    text-align: center;
     justify-content: center;
     width: 80%;
 `;

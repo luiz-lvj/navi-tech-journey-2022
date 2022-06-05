@@ -2,9 +2,11 @@ import React from 'react';
 import Footer from "./Footer";
 import Header from "./Header";
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Menu(){
+
     return(
         <Box>
             <Header/>
