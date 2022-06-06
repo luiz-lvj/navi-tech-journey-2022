@@ -56,6 +56,13 @@ const ParkData = (props) => {
                         value2="180,00"
                         image={assets.park02}
                     />
+                    <ParkCard id="06"
+                        CardType='Private'
+                        title="PAINEL LOCALPOWER"
+                        value1="4.7"
+                        value2="400,00"
+                        image={assets.park06}
+                    />
                     <ParkCard id="03"
                         CardType='Simple'
                         title="PARQUE CONARIS"
@@ -75,13 +82,6 @@ const ParkData = (props) => {
                         title="FAZENDA SOLAR JHG"
                         value1="3.6"
                         value2="135,00"
-                        image={assets.park05}
-                    />
-                    <ParkCard id="06"
-                        CardType='Simple'
-                        title="FAZENDA SOLAR EDP II"
-                        value1="4.7"
-                        value2="150,00"
                         image={assets.park05}
                     />
                 </ParksList>
