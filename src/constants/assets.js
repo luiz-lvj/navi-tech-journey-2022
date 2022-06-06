@@ -6,6 +6,9 @@ import park04 from "../imgs/painel_solar4.png";
 import park05 from "../imgs/painel_solar5.png";
 import park06 from "../imgs/painel_solar0.png";
 
+import co2graph from "../imgs/co2.svg";
+import economiagraph from "../imgs/economia.svg";
+
 
 
 
@@ -18,4 +21,6 @@ export default {
   park04,
   park05,
   park06,
+  co2graph,
+  economiagraph,
 };
