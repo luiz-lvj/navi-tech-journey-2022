@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Solaris App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Repositório do projeto desenvolido pela equipe ITA Capital para o hackathon Navi Journey 2022
 
-## Available Scripts
+Esse repositório serve para documentar a `a ideia original` do projeto.
 
-In the project directory, you can run:
+Aqui não teremos incialmente todas as funcionalidades do Solaris. Mas as funcionalidades básicas com `maneira de se montar` um projeto estilo o nosso, garantindo assim que qualquer pessoa possa aprender com o nosso modelo e criar os seus próprios projetos de hackaton's.
 
-### `npm start`
+## Sobre o app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Aplicativo que conecta locatários com clientes de distribuidoras.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O cliente calcula a conta de luz do próximo mês e o aplicativo mostra o desconto que ele teria na conta caso alugasse uma placa solar.
 
-### `npm test`
+## Objetivos do projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O último século foi marcado por uma expressiva evolução no setor de energia brasileiro e, como consequências, também houve o surgimento de diversas questões climáticas. Hoje, em busca de soluções mais sustentáveis, esse mercado segue passando por transformações.
 
-### `npm run build`
+Nesse contexto, a tecnologia, como soluções de software e criação de aplicativos, tem um papel fundamental para a modernização do setor, que ocorrem através de fatores, como:
+* Transição Energética
+* Energia Renovável
+* Geração Distribuída
+* Monitoramento de Energia
+* Modelos de Comercialização
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O grupo ITA Capital criou o Solaris como `solução tecnológica que auxilie na modernização do mercado de energia no Brasil`, levando em conta os fatores listados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 1 - Organização de files
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As telas do app estão em src/componets, o controle de data base em src/constants. O app foi desenvolvido principalmente em React.
 
-### `npm run eject`
+## 1.2 - times
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+André Vitor (developer) :dbsc
+Brendon Borck (analista financeiro&developer) : BryanBorck
+Bryan Borck (developer): brendonborck
+Luiz Vasconcelos (analista financeiro&developer): luiz-lvj
+Narayane Ribeiro (developer): NarayaneRM
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O time irá contou com uma sessões de mentorias com a equipe de profissionais de gestora Navi  para auxiliar em pequenas dúvidas, mas não podendo escrever código.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
