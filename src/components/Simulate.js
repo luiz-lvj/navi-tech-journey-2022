@@ -7,7 +7,7 @@ import assets from '../constants/assets';
 import { useState } from 'react';
 
 
-export default function Simulate(){
+export default function Simulate() {
     const [myOption, setMyOption] = useState("Maio, 2022");
 
     const handleChange = (event) => {
@@ -35,124 +35,121 @@ export default function Simulate(){
         setSimulated(true);
     }
 
-    return(
+    return (
         <SimulateStyle>
             <Header></Header>
             <TopTextStyle>
                 PARQUE SELECIONADO
             </TopTextStyle>
             <ParkCard id="01"
-                        CardType='RecomendClient'
-                        title='PARQUE SOLAR MRV II'
-                        value1='4.2'
-                        value2='125,00'
-                        image={assets.park01}
+                CardType='RecomendClient'
+                title='PARQUE SOLAR MRV II'
+                value1='4.2'
+                value2='125,00'
+                image={assets.park01}
             />
-            <FormCard>
             {/* <MyInputTitle><p>Mês do Aluguel</p><div>Valor do investimento</div></MyInputTitle> */}
-                <InputArea>
-                    <select value={myOption} onChange={handleChange}>
-                        <option value="Mai, 2022">Maio, 2022</option>
-                        <option value="Abr, 2022">Abril, 2022</option>
-                        <option value="Mar, 2022">Março, 2022</option>
-                        <option value="Fev, 2022">Fevereiro, 2022</option>
-                        <option value="Jan, 2022">Janeiro, 2022</option>
-                        <option value="Dez, 2021">Dezembro, 2021</option>
-                        <option value="Nov, 2021">Novembro, 2021</option>
-                        <option value="Out, 2021">Outubro, 2021</option>
-                        <option value="Set, 2021">Setembro, 2021</option>
-                        <option value="Ago, 2021">Agosto, 2021</option>
-                        <option value="Jul, 2021">Julho, 2021</option>
-                        <option value="Jun, 2021">Junho, 2021</option>
-                    </select>
-                    <input
-                        type="number"
-                        placeholder="Valor do Investimento"
-                        value={value}
-                        onChange={(e) => setValue(e.target.value)}
-                    />
-                    <MyButton onClick={simulate}> Simular </MyButton>
-                </InputArea>
+            <InputArea>
+                <select value={myOption} onChange={handleChange}>
+                    <option value="Mai, 2022">Maio, 2022</option>
+                    <option value="Abr, 2022">Abril, 2022</option>
+                    <option value="Mar, 2022">Março, 2022</option>
+                    <option value="Fev, 2022">Fevereiro, 2022</option>
+                    <option value="Jan, 2022">Janeiro, 2022</option>
+                    <option value="Dez, 2021">Dezembro, 2021</option>
+                    <option value="Nov, 2021">Novembro, 2021</option>
+                    <option value="Out, 2021">Outubro, 2021</option>
+                    <option value="Set, 2021">Setembro, 2021</option>
+                    <option value="Ago, 2021">Agosto, 2021</option>
+                    <option value="Jul, 2021">Julho, 2021</option>
+                    <option value="Jun, 2021">Junho, 2021</option>
+                </select>
+                <input
+                    type="number"
+                    placeholder="Valor do Investimento"
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                />
+                <MyButton onClick={simulate}> Simular </MyButton>
+            </InputArea>
 
-                <EmptyCard></EmptyCard>
-
-            </FormCard>
-            {/* <EconomyGraph src={assets.economiagraph}/>
+            <EconomyGraph src={assets.economiagraph}/>
             <CO2Graph src={assets.co2graph}/>
             <Text1>
             Porcentagem renovável da energia gasta no mês
             </Text1>
             <Text2>
             CC, quantidade de CO2, energia que ele não poluiu
-                </Text2> */}
-            {/* {Simulation(simulated)} */}
+                </Text2>
+            {Simulation(simulated)}
+            <EmptyCard></EmptyCard>
             <Footer></Footer>
-            </SimulateStyle>
+        </SimulateStyle>
     );
 }
 
-// function Simulation(simulated) {
-//     if (simulated)
-//         return (
-//             <div>
-//             <EconomyGraph src={assets.economiagraph}/>
-//                 <CO2Graph src={assets.co2graph}/>
-//                 <Text1>
-//                     Porcentagem renovável da energia gasta no mês
-//                 </Text1>
-//                 <Text2>
-//                     CC, quantidade de CO2, energia que ele não poluiu
-//                 </Text2>
-//             </div>
-//         )
-// }
+function Simulation(simulated) {
+    if (simulated)
+        return (
+            <div>
+            <EconomyGraph src={assets.economiagraph}/>
+                <CO2Graph src={assets.co2graph}/>
+                <Text1>
+                    Porcentagem renovável da energia gasta no mês
+                </Text1>
+                <Text2>
+                    CC, quantidade de CO2, energia que ele não poluiu
+                </Text2>
+            </div>
+        )
+}
 
-// const Text1 = styled.div`
-// position: absolute;
-// width: 125px;
-// height: 37px;
-// left: 90px;
-// top: 540px;
-// font-style: normal;
-// font-weight: 400;
-// font-size: 10px;
-// line-height: 12px;
-// display: flex;
-// align-items: center;
-// text-align: center;
-// `
+const Text1 = styled.div`
+position: absolute;
+width: 125px;
+height: 37px;
+left: 90px;
+top: 540px;
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+display: flex;
+align-items: center;
+text-align: center;
+`
 
-// const Text2 = styled.div`
-// position: absolute;
-// width: 125px;
-// height: 37px;
-// left: 245px;
-// top: 540px;
-// font-style: normal;
-// font-weight: 400;
-// font-size: 10px;
-// line-height: 12px;
-// display: flex;
-// align-items: center;
-// text-align: center;
-// `
+const Text2 = styled.div`
+position: absolute;
+width: 125px;
+height: 37px;
+left: 245px;
+top: 540px;
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+display: flex;
+align-items: center;
+text-align: center;
+`
 
-// const CO2Graph = styled.img`
-// position: absolute;
-// width: 158px;
-// height: 127px;
-// left: 220px;
-// top: 430px;
-// `
+const CO2Graph = styled.img`
+position: absolute;
+width: 158px;
+height: 127px;
+left: 220px;
+top: 430px;
+`
 
 
-// const EconomyGraph = styled.img`
-// position: absolute;
-// width: 162px;
-// height: 135px;
-// left: 70px;
-// top: 430px;
-// `
+const EconomyGraph = styled.img`
+position: absolute;
+width: 162px;
+height: 135px;
+left: 70px;
+top: 430px;
+`
 
 const SimulateStyle = styled.div`
 display: flex;
@@ -184,24 +181,6 @@ line-height: 12px;
 
 `
 
-const FormCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    width: 95%;
-
-    background: #F0F0F0;
-
-    border: 0;
-    border-radius: 15px;
-    height: 380px;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    outline: 0;
-`;
 
 const InputArea = styled.div`
     display: flex;
@@ -273,6 +252,6 @@ const MyButton = styled.button`
 const EmptyCard = styled.div`
 align-items: center;
 width: 100%;
-height: 300px;
+height: 400px;
 background: blue;
 `;
