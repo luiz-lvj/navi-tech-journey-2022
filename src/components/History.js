@@ -13,9 +13,9 @@ export default function History() {
 
     const [sumNumbers, setSumNumbers] = useState(0);
 
-    const meanPrice = 80;
+    const meanPrice = 0.60;
 
-    let meanQuantity = sumNumbers/meanPrice
+    let meanQuantity = sumNumbers * meanPrice;
 
 
     const dictMonthIdx = {
@@ -77,7 +77,7 @@ export default function History() {
             </MainCard>
             <MeioCard>
                 <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>{meanQuantity}</span></h3>
-                <h3>Média de Preço <br></br> de Energia (kWh) <br /> <br /> <span>{meanPrice}</span></h3>
+                <h3>Média de Preço <br></br> de Energia (R$/kWh) <br /> <br /> <span>{meanPrice}</span></h3>
                 <h3>Valor Total Gasto <br></br> Anualmente (R$) <br /> <br /> <span>{sumNumbers}</span></h3>
             </MeioCard>
             <TextInputCard> Seus Inputs </TextInputCard>
@@ -180,6 +180,7 @@ const MeioCard = styled.div`
     height: 80px;
 
     outline: 0;
+    margin-top: 20px;
 
     h3 {
         font-size:  10px;
