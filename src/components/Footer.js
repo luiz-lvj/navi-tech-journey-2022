@@ -17,7 +17,6 @@ const Footer = () => {
 
     return (
         <Box>
-            {console.log(location)}
             <Column>
                 <FooterLink >
                     <i className="icone-home">

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default function BarGraph(props){
-    const widthInput = props.width;
+    const widthInput = parseFloat(props.width);
 
     const widthBar = widthInput;
     const heightBar = widthBar*200/350;
