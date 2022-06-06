@@ -67,9 +67,9 @@ export default function History() {
                 />
             </MainCard>
             <MeioCard>
-                <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>1.2</span></h3>
-                <h3>Média de Preço <br></br> de Energia (kWh) <br /> <br /> <span>80,00</span></h3>
-                <h3>Valor Total Gasto <br></br> Anualmente (kWh) <br /> <br /> <span>3200,00</span></h3>
+                <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>3744</span></h3>
+                <h3>Média de Preço <br></br> de Energia (R$/kWh) <br /> <br /> <span>0,60</span></h3>
+                <h3>Valor Total Gasto <br></br> Anualmente (R$) <br /> <br /> <span>6420,00</span></h3>
             </MeioCard>
             <TextInputCard> Seus Inputs </TextInputCard>
             <FormCard>
