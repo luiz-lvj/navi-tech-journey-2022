@@ -37,6 +37,6 @@ Bryan Borck (developer): brendonborck
 Luiz Vasconcelos (analista financeiro&developer): luiz-lvj
 Narayane Ribeiro (developer): NarayaneRM
 
-O time irá contou com uma sessões de mentorias com a equipe de profissionais de gestora Navi  para auxiliar em pequenas dúvidas, mas não podendo escrever código.
+O time contou com uma sessões de mentorias com a equipe de profissionais de gestora Navi  para auxiliar em pequenas dúvidas, mas não podendo escrever código.
 
 
