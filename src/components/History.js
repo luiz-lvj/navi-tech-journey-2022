@@ -11,6 +11,13 @@ export default function History() {
     const [numbersGraph, setNumbersGraph] = useState([0,0,0,0,0,0,0,0,0,0,0,0]);
     const [idxOnChange, setIdxOnChange] = useState(11);
 
+    const [sumNumbers, setSumNumbers] = useState(0);
+
+    const meanPrice = 0.60;
+
+    let meanQuantity = sumNumbers * meanPrice;
+
+
     const dictMonthIdx = {
         "Mai, 2022": 11,
         "Abr, 2022": 10,
@@ -30,7 +37,7 @@ export default function History() {
 
     const handleChange = (event) => {
         setMyOption(event.target.value);
-        setIdxOnChange(dictMonthIdx[event.target.value])
+        setIdxOnChange(dictMonthIdx[event.target.value]);
     }
 
     const [list, setList] = useState([]);
@@ -46,6 +53,7 @@ export default function History() {
         tempArr.push([myOption, value]);
         setList(tempArr);
         setValue("");
+        setSumNumbers(sumNumbers + parseFloat(value));
     };
 
     const handleSelectMonth = (idx) =>{
@@ -53,6 +61,7 @@ export default function History() {
         inputs[idx] = parseFloat(value);
         setNumbersGraph(inputs);
     }
+
 
     return (
         <HistoryStyle>
@@ -67,9 +76,9 @@ export default function History() {
                 />
             </MainCard>
             <MeioCard>
-                <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>3744</span></h3>
-                <h3>Média de Preço <br></br> de Energia (R$/kWh) <br /> <br /> <span>0,60</span></h3>
-                <h3>Valor Total Gasto <br></br> Anualmente (R$) <br /> <br /> <span>6420,00</span></h3>
+                <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>{meanQuantity}</span></h3>
+                <h3>Média de Preço <br></br> de Energia (R$/kWh) <br /> <br /> <span>{meanPrice}</span></h3>
+                <h3>Valor Total Gasto <br></br> Anualmente (R$) <br /> <br /> <span>{sumNumbers}</span></h3>
             </MeioCard>
             <TextInputCard> Seus Inputs </TextInputCard>
             <FormCard>
@@ -171,6 +180,7 @@ const MeioCard = styled.div`
     height: 80px;
 
     outline: 0;
+    margin-top: 20px;
 
     h3 {
         font-size:  10px;
