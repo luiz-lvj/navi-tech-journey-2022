@@ -39,7 +39,7 @@ export default function Simulate(){
         <SimulateStyle>
             <Header></Header>
             <TopTextStyle>
-                Parque Selecionado:
+                PARQUE SELECIONADO
             </TopTextStyle>
             <ParkCard id="01"
                         CardType='RecomendClient'
@@ -47,9 +47,9 @@ export default function Simulate(){
                         value1='4.2'
                         value2='125,00'
                         image={assets.park01}
-                        />
+            />
             <FormCard>
-            <MyInputTitle><p>Mês do Aluguel</p><div>Valor do investimento</div></MyInputTitle>
+            {/* <MyInputTitle><p>Mês do Aluguel</p><div>Valor do investimento</div></MyInputTitle> */}
                 <InputArea>
                     <select value={myOption} onChange={handleChange}>
                         <option value="Mai, 2022">Maio, 2022</option>
@@ -74,6 +74,8 @@ export default function Simulate(){
                     <MyButton onClick={simulate}> Simular </MyButton>
                 </InputArea>
 
+                <EmptyCard></EmptyCard>
+
             </FormCard>
             {/* <EconomyGraph src={assets.economiagraph}/>
             <CO2Graph src={assets.co2graph}/>
@@ -83,89 +85,74 @@ export default function Simulate(){
             <Text2>
             CC, quantidade de CO2, energia que ele não poluiu
                 </Text2> */}
-            {Simulation(simulated)}
+            {/* {Simulation(simulated)} */}
             <Footer></Footer>
             </SimulateStyle>
     );
 }
 
-function Simulation(simulated) {
-    if (simulated)
-        return (
-            <div>
-            <EconomyGraph src={assets.economiagraph}/>
-                <CO2Graph src={assets.co2graph}/>
-                <Text1>
-                Porcentagem renovável da energia gasta no mês
-                </Text1>
-                <Text2>
-                CC, quantidade de CO2, energia que ele não poluiu
-                    </Text2>
-            </div>
-        )
-}
+// function Simulation(simulated) {
+//     if (simulated)
+//         return (
+//             <div>
+//             <EconomyGraph src={assets.economiagraph}/>
+//                 <CO2Graph src={assets.co2graph}/>
+//                 <Text1>
+//                     Porcentagem renovável da energia gasta no mês
+//                 </Text1>
+//                 <Text2>
+//                     CC, quantidade de CO2, energia que ele não poluiu
+//                 </Text2>
+//             </div>
+//         )
+// }
 
-const Text1 = styled.div`
-position: absolute;
-width: 125px;
-height: 37px;
-left: 90px;
-top: 540px;
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-display: flex;
-align-items: center;
-text-align: center;
-`
+// const Text1 = styled.div`
+// position: absolute;
+// width: 125px;
+// height: 37px;
+// left: 90px;
+// top: 540px;
+// font-style: normal;
+// font-weight: 400;
+// font-size: 10px;
+// line-height: 12px;
+// display: flex;
+// align-items: center;
+// text-align: center;
+// `
 
-const Text2 = styled.div`
-position: absolute;
-width: 125px;
-height: 37px;
-left: 245px;
-top: 540px;
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-display: flex;
-align-items: center;
-text-align: center;
-`
+// const Text2 = styled.div`
+// position: absolute;
+// width: 125px;
+// height: 37px;
+// left: 245px;
+// top: 540px;
+// font-style: normal;
+// font-weight: 400;
+// font-size: 10px;
+// line-height: 12px;
+// display: flex;
+// align-items: center;
+// text-align: center;
+// `
 
-const CO2Graph = styled.img`
-position: absolute;
-width: 158px;
-height: 127px;
-left: 220px;
-top: 430px;
-`
+// const CO2Graph = styled.img`
+// position: absolute;
+// width: 158px;
+// height: 127px;
+// left: 220px;
+// top: 430px;
+// `
 
 
-const EconomyGraph = styled.img`
-position: absolute;
-width: 162px;
-height: 135px;
-left: 70px;
-top: 430px;
-`
-
-const BoxCard = styled.div`
-box-sizing: border-box;
-
-position: absolute;
-width: 160px;
-height: 57px;
-left: 28px;
-top: 332px;
-
-background: #A800FF;
-border: 1px solid #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 5px;
-`
+// const EconomyGraph = styled.img`
+// position: absolute;
+// width: 162px;
+// height: 135px;
+// left: 70px;
+// top: 430px;
+// `
 
 const SimulateStyle = styled.div`
 display: flex;
@@ -179,33 +166,30 @@ background: #F5F5F5;
 `;
 
 const TopTextStyle = styled.div`
-position: absolute;
-width: 180px;
-height: 20px;
-top: 100px;
-left: 200px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 // border: solid green 1px;
 
+width: 100%;
+height: 30px;
+background: #8DEEF2;
+
+color: #212121;
 font-style: normal;
 font-weight: 400;
-font-size: 10px;
+font-size: 20px;
 line-height: 12px;
-align: center;
-align
 
 `
-
-// display: flex;
-// align-items: center;
-// text-align: center;
-// align: center;
 
 const FormCard = styled.div`
     display: flex;
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    width: 90%;
+    width: 95%;
 
     background: #F0F0F0;
 
@@ -218,116 +202,6 @@ const FormCard = styled.div`
 
     outline: 0;
 `;
-
-
-const HistoryStyle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    padding-bottom: 60px;
-    width: 100%;
-    background: #F5F5F5;
-`;
-
-const MainCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-
-    background: #F0F0F0;
-
-    border: 0;
-    border-radius: 15px;
-    height: 160px;
-
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    outline: 0;
-`;
-
-const MainTitle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    width: 100%;
-
-    background: #F0F0F0;
-
-    border: 0;
-    border-radius: 15px;
-    height: 40px;
-
-    outline: 0;
-
-    font-size:   16px;
-    color:  #A800FF;
-    font-weight:  bold;
-    text-indent: 15px;
-`;
-
-const MeioCard = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    border: 0;
-    border-radius: 15px;
-    height: 80px;
-
-    outline: 0;
-
-    h3 {
-        font-size:  10px;
-        color:  #212121;
-
-        border-left: 2px solid #D9D9D9;
-        text-align: center;
-        float: left;
-        width: 33%;
-        height: 40px;
-
-        span{
-            font-size:  16px;
-            font-weight: bold;
-        }
-
-        :first-child{
-            border-left: none;
-        };
-    }
-`;
-
-const TextInputCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-
-    font-family: 'Lato', Helvetica, sans-serif;
-    font-size:   16px;
-    color:  #212121;
-    font-weight:  bold;
-
-    background: #F0F0F0;
-
-    border: 0;
-    border-radius: 15px;
-    height: 40px;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    outline: 0;
-`;
-
 
 const InputArea = styled.div`
     display: flex;
@@ -354,6 +228,7 @@ const InputArea = styled.div`
         border-radius: 10px;
         border: 1px solid #A800FF;
         height: 30px;
+        width: 30%;
 
         margin-right: 2%;
 
@@ -374,7 +249,7 @@ const InputArea = styled.div`
         border-radius: 10px;
         border: 1px solid #A800FF;
         height: 30px;
-        width: 50%;
+        width: 40%;
 
         margin-right: 2%;
     }
@@ -395,51 +270,9 @@ const MyButton = styled.button`
     height: 30px;
 `;
 
-const MyInput = styled.li`
-    display: flex;
-    flex-direction: row;
-
-    font-size:   12px;
-    color:  #212121;
-
-    height: 24px;
-
-    p {
-        color:  #A800FF;
-        font-style: italic;
-        width: 25%;
-        margin-left: 10%;
-    }
-
-    div {
-        text-indent: 50px;
-        font-weight: bold;
-    }
-`;
-
-const MyInputTitle = styled.li`
-    display: flex;
-    flex-direction: row;
-
-    font-size:   12px;
-    color:  #212121;
-
-    padding-top: 10px;
-    margin-bottom: 5px;
-
-    height: 30px;
-
-    p {
-        color:  #A800FF;
-        font-style: italic;
-        font-weight: bold;
-        width: 25%;
-        margin-left: 8%;
-    }
-
-    div {
-        line-height: 25px;
-        text-indent: 15px;
-        font-weight: bold;
-    }
+const EmptyCard = styled.div`
+align-items: center;
+width: 100%;
+height: 300px;
+background: blue;
 `;
