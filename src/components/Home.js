@@ -5,13 +5,13 @@ import styled from 'styled-components';
 import ParkData from "../constants/ParkData";
 import BarGraph from './BarGraph';
 
-export default function Home(){
+export default function Home(props){
 
     const months = ["D", "J", "F", "M", "A", "M", "J"];
     const numbers = [100, 120, 130, 140, 160, 170, 190];
     return(
         <HomeStyle>
-            <HeaderHome></HeaderHome>
+            <HeaderHome userName={props.userName} ></HeaderHome>
             <HomeContent>
                 <TopHomePage>
                     <InfoHomePage>

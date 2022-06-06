@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
-export default function Login(){
+export default function Login(props){
     const history = useNavigate();
 
     const [inputs, setInputs] = useState({});
@@ -13,6 +13,9 @@ export default function Login(){
         event.preventDefault();
         const name = event.target.name;
         const value = event.target.value;
+        if(name == "username"){
+            props.setUserName(value);
+        }
         // setInputs({
         //     'username': name == 'username' ? value : '',
         //     'email': name == 'email' ? value : '',
@@ -23,7 +26,6 @@ export default function Login(){
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(inputs);
         history("/home");
     }
     
@@ -110,7 +112,7 @@ const LabelStyle = styled.label`
     align-items: left;
     width: 80%;
 
-    font-family: Lato, Helvetica, sans-serif
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size:   10px;
     color:  #A800FF;
     font-style:  italic;
@@ -126,7 +128,7 @@ const InputStyle = styled.input`
     align-items: center;
     width: 90%;
 
-    font-family: Lato, Helvetica, sans-serif
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size:   10px;
     color:  #212121;
     text-indent: 10px;
@@ -151,7 +153,7 @@ const ButtonStyle = styled.input`
     align-items: center;
     width: 90%;
 
-    font-family: Lato, Helvetica, sans-serif
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size:   10px;
     color:  #FFFFFF;
     font-style:  bold;

@@ -5,7 +5,7 @@ import MenuHOME from "../imgs/icone_menu_0.png";
 import styled from 'styled-components';
 import { useLocation, useNavigate } from "react-router-dom";
 
-const HeaderHome=() => {
+const HeaderHome=(props) => {
 
     const location = useLocation();
     const history = useNavigate();
@@ -33,7 +33,7 @@ const HeaderHome=() => {
                         <i className="Nome-cliente">
                             <NameStyle>
                                 
-                                    Olá, Bryan Borck
+                                    Olá, {props.userName}
                                 
                             </NameStyle>
                         </i>
@@ -58,7 +58,7 @@ const HeaderHome=() => {
 export default HeaderHome;
 
 const ClienteStyle = styled.div`
-    margin-top: 25px;
+    margin-top: 5px;
     img{
         width: 70px;
         height: 70px;
@@ -66,6 +66,7 @@ const ClienteStyle = styled.div`
     background: #8DEEF2; 
     border: 5px solid #8DEEF2;
     border-radius: 90px;
+    z-index: -1;
 `;
 const NameStyle = styled.div`
     color: white;
