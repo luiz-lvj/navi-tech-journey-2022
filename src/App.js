@@ -9,6 +9,7 @@ import Start from "./components/Start";
 import Menu from "./components/Menu";
 import Park from "./components/Park";
 import { useState } from "react";
+import End from "./components/End";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/parklist" element={<ParkList/>}/>
       <Route path="/park" element={<Park/>}/>
       <Route path="/simulate" element={<Simulate/>}/>
+      <Route path="/end"  element={<End/>} />
     </Routes>
     </BrowserRouter>
   );
