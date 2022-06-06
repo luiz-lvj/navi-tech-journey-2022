@@ -2,14 +2,35 @@ import React, { useState } from 'react';
 import Footer from "./Footer";
 import Header from "./Header";
 import styled from 'styled-components';
+import BarGraph from './BarGraph';
 
 
 export default function History() {
 
+    const monthsGraph = ["J","J", "A", "S", "O", "N", "D", "J", "F", "M", "A", "M"];
+    const [numbersGraph, setNumbersGraph] = useState([0,0,0,0,0,0,0,0,0,0,0,0]);
+    const [idxOnChange, setIdxOnChange] = useState(11);
+
+    const dictMonthIdx = {
+        "Mai, 2022": 11,
+        "Abr, 2022": 10,
+        "Mar, 2022": 9,
+        "Fev, 2022": 8,
+        "Jan, 2022": 7,
+        "Dez, 2021": 6,
+        "Nov, 2021": 5,
+        "Out, 2021": 4,
+        "Set, 2021": 3,
+        "Ago, 2021": 2,
+        "Jul, 2021": 1,
+        "Jun, 2021": 0
+    }
+
     const [myOption, setMyOption] = useState("Maio, 2022");
 
     const handleChange = (event) => {
-        setMyOption(event.target.value)
+        setMyOption(event.target.value);
+        setIdxOnChange(dictMonthIdx[event.target.value])
     }
 
     const [list, setList] = useState([]);
@@ -27,11 +48,23 @@ export default function History() {
         setValue("");
     };
 
+    const handleSelectMonth = (idx) =>{
+        let inputs = numbersGraph;
+        inputs[idx] = parseFloat(value);
+        setNumbersGraph(inputs);
+    }
+
     return (
         <HistoryStyle>
             <Header></Header>
             <MainCard>
                 <MainTitle>Evolução da sua conta de luz</MainTitle>
+                <BarGraph
+                title=""
+                width={300}
+                months={monthsGraph}
+                numbers={numbersGraph}
+                />
             </MainCard>
             <MeioCard>
                 <h3>Média de Qtd. <br></br> de Energia (kWh) <br /> <br /> <span>1.2</span></h3>
@@ -42,24 +75,27 @@ export default function History() {
             <FormCard>
                 <InputArea>
                     <select value={myOption} onChange={handleChange}>
-                        <option value="Mai, 2022">Maio, 2022</option>
-                        <option value="Abr, 2022">Abril, 2022</option>
-                        <option value="Mar, 2022">Março, 2022</option>
-                        <option value="Fev, 2022">Fevereiro, 2022</option>
-                        <option value="Jan, 2022">Janeiro, 2022</option>
-                        <option value="Dez, 2021">Dezembro, 2021</option>
-                        <option value="Nov, 2021">Novembro, 2021</option>
-                        <option value="Out, 2021">Outubro, 2021</option>
-                        <option value="Set, 2021">Setembro, 2021</option>
-                        <option value="Ago, 2021">Agosto, 2021</option>
-                        <option value="Jul, 2021">Julho, 2021</option>
-                        <option value="Jun, 2021">Junho, 2021</option>
+                        <option value="Mai, 2022"  >Maio, 2022</option>
+                        <option value="Abr, 2022"  >Abril, 2022</option>
+                        <option value="Mar, 2022"  >Março, 2022</option>
+                        <option value="Fev, 2022"  >Fevereiro, 2022</option>
+                        <option value="Jan, 2022"  >Janeiro, 2022</option>
+                        <option value="Dez, 2021"  >Dezembro, 2021</option>
+                        <option value="Nov, 2021"  >Novembro, 2021</option>
+                        <option value="Out, 2021"  >Outubro, 2021</option>
+                        <option value="Set, 2021"  >Setembro, 2021</option>
+                        <option value="Ago, 2021"  >Agosto, 2021</option>
+                        <option value="Jul, 2021"  >Julho, 2021</option>
+                        <option value="Jun, 2021"  >Junho, 2021</option>
                     </select>
                     <input
                         type="number"
                         placeholder="Valor de Conta (XXX,00)"
                         value={value}
-                        onChange={(e) => setValue(e.target.value)}
+                        onChange={(e) => {
+                            setValue(e.target.value);
+                            handleSelectMonth(idxOnChange);
+                        }}
                     />
                     <MyButton onClick={addToList}> Add </MyButton>
                 </InputArea>
@@ -230,7 +266,7 @@ const InputArea = styled.div`
 
         option {
             color:  #212121;
-            height: 12 px;
+            height: 12px;
             font-style:  italic;
         }
     }
