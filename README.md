@@ -31,11 +31,11 @@ As telas do app estão em src/componets, o controle de data base em src/constant
 
 ## 1.2 - times
 
-André Vitor (developer) :dbsc
-Brendon Borck (analista financeiro&developer) : BryanBorck
-Bryan Borck (developer): brendonborck
-Luiz Vasconcelos (analista financeiro&developer): luiz-lvj
-Narayane Ribeiro (developer): NarayaneRM
+* André Vitor (developer) :dbsc
+* Brendon Borck (analista financeiro&developer) : BryanBorck
+* Bryan Borck (developer): brendonborck
+* Luiz Vasconcelos (analista financeiro&developer): luiz-lvj
+* Narayane Ribeiro (developer): NarayaneRM
 
 O time contou com uma sessões de mentorias com a equipe de profissionais de gestora Navi  para auxiliar em pequenas dúvidas, mas não podendo escrever código.
 
