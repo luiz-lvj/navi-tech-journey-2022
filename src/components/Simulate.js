@@ -32,7 +32,7 @@ export default function Simulate(){
     const [simulated, setSimulated] = useState(false);
 
     const simulate = () => {
-
+        setSimulated(true);
     }
 
     return(
@@ -90,18 +90,19 @@ export default function Simulate(){
 }
 
 function Simulation(simulated) {
-    return (
-        <div>
-        <EconomyGraph src={assets.economiagraph}/>
-            <CO2Graph src={assets.co2graph}/>
-            <Text1>
-            Porcentagem renovável da energia gasta no mês
-            </Text1>
-            <Text2>
-            CC, quantidade de CO2, energia que ele não poluiu
-                </Text2>
-        </div>
-    )
+    if (simulated)
+        return (
+            <div>
+            <EconomyGraph src={assets.economiagraph}/>
+                <CO2Graph src={assets.co2graph}/>
+                <Text1>
+                Porcentagem renovável da energia gasta no mês
+                </Text1>
+                <Text2>
+                CC, quantidade de CO2, energia que ele não poluiu
+                    </Text2>
+            </div>
+        )
 }
 
 const Text1 = styled.div`
@@ -379,7 +380,7 @@ const InputArea = styled.div`
     }
 `;
 
-const MyButton = styled.div`
+const MyButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
