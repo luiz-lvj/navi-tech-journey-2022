@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import ParkCard from './ParkCard';
 import assets from '../constants/assets';
 import { useState } from 'react';
+import BigCardSimulate from './BigCardSimulate';
+import simulImg from '../imgs/img_simul.PNG';
 
 
 export default function Simulate() {
@@ -73,20 +75,177 @@ export default function Simulate() {
                 <MyButton onClick={simulate}> Simular </MyButton>
             </InputArea>
 
-            <EconomyGraph src={assets.economiagraph}/>
+            
+            {/*Simulation(simulated)*/}
+
+            <EmptyCard>
+               {simulated && <ImgSimul src={simulImg} alt=""/>}
+                {simulated && <BigCardSimulate/>} 
+            </EmptyCard>
+            
+            <Footer></Footer>
+        </SimulateStyle>
+    );
+}
+function FirstPurpleBox() {
+    return (
+        <PurpleBox1>
+            <PurpleBoxText1>PREVISÃO DE GASTO DE ENERGIA</PurpleBoxText1>
+            <PurpleBoxText2>Previsão de gasto na simulação</PurpleBoxText2>
+            <BlueCard1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$ 400,00</BlueCard1>
+            <BlueCard2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$ 100,00</BlueCard2>
+            <EconomizadoBox>Economizado</EconomizadoBox>
+            <EconomizadoValorBox>R$ 300,00</EconomizadoValorBox>
+        </PurpleBox1>
+    )
+
+}
+
+const EconomizadoValorBox = styled.div`
+    left: 250px;
+    top: 110px;
+
+
+    width: 175px;
+    height: 41px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #A800FF;
+
+`
+
+const EconomizadoBox = styled.div`
+
+    width: 170px;
+    height: 37px;
+    left: 87px;
+    top: 113px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #A800FF;
+
+`
+
+const PurpleBoxText1 = styled.div`
+
+    width: 157px;
+    height: 37px;
+    left: 80px;
+    top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #212121;
+`
+
+const PurpleBoxText2 = styled.div`
+
+    width: 159px;
+    height: 37px;
+    left: 240px;
+    top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #212121;
+`
+
+const PurpleBox1 = styled.div`
+
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #A800FF;
+    z-index: 10;
+    border-radius: 10px;
+`
+
+const BlueCard1 = styled.div`
+box-sizing: border-box;
+
+
+width: 140px;
+height: 28px;
+top: 50px;
+left: 90px;
+
+background: #8DEEF2;
+border: 1px solid #212121;
+border-radius: 5px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+text-align: center;
+
+`
+
+const BlueCard2 = styled.div`
+box-sizing: border-box;
+
+
+width: 140px;
+height: 28px;
+
+top: 50px;
+left: 250px;
+
+background: #8DEEF2;
+border: 1px solid #212121;
+border-radius: 5px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+text-align: center;
+
+`
+
+const ImgSimul = styled.img`
+    width: 360px;
+    height: 132px;;
+`
+
+/*<EconomyGraph src={assets.economiagraph}/>
             <CO2Graph src={assets.co2graph}/>
             <Text1>
             Porcentagem renovável da energia gasta no mês
             </Text1>
             <Text2>
             CC, quantidade de CO2, energia que ele não poluiu
-                </Text2>
-            {Simulation(simulated)}
-            <EmptyCard></EmptyCard>
-            <Footer></Footer>
-        </SimulateStyle>
-    );
-}
+                </Text2>*/
 
 function Simulation(simulated) {
     if (simulated)
@@ -250,8 +409,9 @@ const MyButton = styled.button`
 `;
 
 const EmptyCard = styled.div`
-align-items: center;
-width: 100%;
-height: 400px;
-background: blue;
+    align-items: center;
+    width: 100%;
+    overflow: scroll;
+    height: 600px;
+
 `;
