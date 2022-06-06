@@ -10,7 +10,7 @@ const ParkData = (props) => {
 
     if (home) {
         return (
-            <ParkContent>
+            <ParkContent1>
                 <ParksList>
                     <ParkCard id="01"
                         CardType='RecomendClient'
@@ -35,12 +35,12 @@ const ParkData = (props) => {
                         stat1="Clique neste card para saber mais sobre os créditos de carbono e a importância de preservar o planeta usando energia solar"
                     />
                 </ParksList>
-            </ParkContent>
+            </ParkContent1>
         );
     }
     else {
         return (
-            <ParkContent>
+            <ParkContent2>
                 <ParksList>
                     <ParkCard id="01"
                         CardType='RecomendClient'
@@ -85,7 +85,7 @@ const ParkData = (props) => {
                         image={assets.park05}
                     />
                 </ParksList>
-            </ParkContent>
+            </ParkContent2>
         );
     }
 }
@@ -100,7 +100,20 @@ const ParksList = styled.li`
 
 `;
 
-const ParkContent = styled.div`
+const ParkContent1 = styled.div`
+    padding-top:10px; 
+    padding-bottom: 0px;
+    position: center;
+    left: 0;
+    right: 0;
+    top: 85px;
+    bottom: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+const ParkContent2 = styled.div`
     padding-top:20px; 
     padding-bottom: 45px;
     position: center;
@@ -111,6 +124,4 @@ const ParkContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
 `;

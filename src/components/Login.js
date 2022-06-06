@@ -86,7 +86,7 @@ const LoginStyle = styled.div`
 
     background: #FFFFFF;
     padding-top: 80px;
-    padding-bottom: 104px;
+    padding-bottom: 123px;
     
     h2{
         padding-top: 20px;

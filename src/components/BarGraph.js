@@ -59,6 +59,8 @@ const BarGraphStyle = styled.div`
     margin-top: 5px;
     margin-bottom: 5px;
     h1{
+        margin-left: 5px;
+        margin-bottom: 15px;
         font-weight: bold;
         color: #A800FF;
     }
