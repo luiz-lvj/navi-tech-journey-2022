@@ -6,6 +6,7 @@ import assets from "../constants/assets";
 import ParkCard from './ParkCard';
 import mapPanel from '../imgs/map_panel1.png';
 import { useNavigate } from 'react-router-dom';
+import BarGraph from './BarGraph';
 
 export default function Park() {
 
@@ -37,7 +38,15 @@ export default function Park() {
 
             <p>Evolução da Energia Produzida</p>
 
-            <GraphCard></GraphCard>
+            <GraphCard>
+                <BarGraph
+                title=""
+                width={200}
+                months={["J","J", "A", "S", "O", "N", "D", "J", "F", "M", "A", "M"]}
+                numbers={[9,7,4,5,5,6,7,8,7,6,4,7]}
+                />
+
+            </GraphCard>
 
             <HorizontalLine/>
 
@@ -147,7 +156,6 @@ const GraphCard = styled.div`
     height: 200px;
     width: 100%;
 
-    background: #F0F0F0;
 
     margin-bottom: 10px;
 `;

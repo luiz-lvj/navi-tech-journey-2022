@@ -52,7 +52,6 @@ export default function BarGraph(props){
 const BarGraphStyle = styled.div`
     width:  ${props => props.width+`px`};
     height: ${ props => props.height+`px`};
-    background: #F5F5F5;
     display: flex;
     flex-direction: column;
     padding: ${ props => props.width*0.01+'px'};
